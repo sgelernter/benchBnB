@@ -2,11 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./components/root";
 import configureStore from "./store/store";
-import { fetchBenches } from "./actions/bench_actions";
-// import { signup, login, logout } from "./actions/session_actions";
-
-// window.login = login;
-// window.signup = signup;
+import { fetchBenches } from "./util/bench_api_util";
 
 
 
@@ -26,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const rootEl = document.getElementById('root');
+    window.bounds = {bounds: {northEast: {lat: 41.314190, lng: -72.920007}, southWest: {lat: 41.306720, lng: -72.934826}}};
     window.fetchBenches = fetchBenches;
     window.getState = store.getState;
     window.dispatch = store.dispatch;

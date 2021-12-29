@@ -8,7 +8,7 @@ class Bench < ApplicationRecord
         top, bottom, left, right = bounds[:northEast][:lat], bounds[:southWest][:lat], bounds[:southWest][:lng], bounds[:northEast][:lng]
 
         return benches.select do |bench|
-            (bench.lat < top && bench.lat > bottom) && (bench.lng > left && bench.lng < right)
+            (bench.lat < top.to_f && bench.lat > bottom.to_f) && (bench.lng > left.to_f && bench.lng < right.to_f)
         end
     end
 
