@@ -27,12 +27,9 @@ class SessionForm extends React.Component {
     render() {
         const currentPath = this.props.match.path;
         const otherFormPath = (currentPath === '/signup' ? '/login' : '/signup'); 
-        if (this.props.loggedIn) {
-            return <Redirect to='/'></Redirect>
-        } else {
             return (
                 <div id='session-form'>
-                    <h3>{this.props.formType}</h3>
+                    <header>{this.props.formType}</header>
                     <form onSubmit={this.handleSubmit}>
                         <label>Username:
                             <input type="text" value={this.state.username} onChange={this.updateField('username')}/>
@@ -56,7 +53,6 @@ class SessionForm extends React.Component {
                     </ul>
                 </div>
             )
-        }
     }
 }
 
