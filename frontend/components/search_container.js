@@ -9,7 +9,7 @@ const mSTP = state => ({
 
 const mDTP = dispatch => ({
     fetchBenches: () => dispatch(fetchBenches()),
-    updateBounds: () => dispatch(updateBounds())
+    updateBounds: (bounds) => dispatch(updateBounds(bounds))
 })
 
 export default connect(mSTP, mDTP)(Search); 

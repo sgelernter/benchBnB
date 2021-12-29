@@ -5,10 +5,16 @@ export default class MarkerManager {
     }
 
     updateMarkers(benches){
-        console.log("time to update");
+        let benchesObj = {};
         benches.forEach (bench => {
             this.createMarkerFromBench(bench);
+            benchesObj[bench.id] = bench;
         })
+        debugger
+    }
+
+    removeMarker(){
+        
     }
 
     createMarkerFromBench(bench){
