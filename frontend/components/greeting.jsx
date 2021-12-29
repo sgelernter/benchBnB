@@ -10,7 +10,7 @@ class Greeting extends React.Component {
         if (this.props.currentUser) {
             return (
                 <div id='greeting'>
-                    <h2>Welcome, {this.props.currentUser.username}</h2>
+                    <h3>Welcome, {this.props.currentUser.username}</h3>
                     <button onClick={this.props.logout}>Get outta hear</button>
                 </div>
             )
@@ -18,7 +18,6 @@ class Greeting extends React.Component {
             return (
                 <div id='greeting'>
                     <Link to='/signup'>Sign Up</Link>
-                    <br/>
                     <Link to='/login'>Log In</Link>
                 </div>
             )
